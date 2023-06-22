@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: postgres:12
+    volumes:
+      - /opt/docker/banco-teste:/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
